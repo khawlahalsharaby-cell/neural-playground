@@ -1,75 +1,141 @@
-# 🧠 Neural Playground | مختبر الشبكات العصبية
+# Neural Playground
 
-> **Explore Neural Networks. Understand How AI Learns.**
+**Explore Neural Networks. Understand How AI Learns.**
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+An interactive learning space designed to make neural-network concepts
+easier to explore and understand.
 
----
+------------------------------------------------------------------------
 
-## 📖 About the Project
+## About the Project
 
-**Neural Playground** is an interactive, browser-based educational laboratory designed to demystify Artificial Neural Networks (ANNs). 
+**Neural Playground** is an educational web project focused on making
+neural networks more approachable. Instead of treating the subject as
+equations alone, the project aims to give learners a visual place to
+explore the ideas behind neural networks.
 
-For many beginners, machine learning feels like a "black box" buried under complex mathematical notations and heavy backend frameworks. Neural Playground bridges this gap by providing a visual, hands-on environment right inside your web browser. It allows learners to peer inside a neural network, observe how signals propagate through layers, experiment with weights and biases, and understand training mechanisms—all without requiring any prior installation or backend setup.
+> Keep feature descriptions accurate: include only features that are
+> implemented and tested in the current version.
 
----
+## Features
 
-## ✨ Features
+Confirm each item against the current application before publishing:
 
-- **Interactive Neural Network Simulation:** Visualizes a multi-layer neural network (Input, Hidden, and Output layers) built with HTML5 Canvas.
-- **Real-Time Forward Pass:** Adjust input sliders ($X_1, X_2$) and watch live mathematical computations update instantly across nodes.
-- **Deep Component Inspection:** Click on any neuron or connection line to open a smart mathematical inspector displaying activation values ($a$), weighted sums ($z$), biases ($b$), and connection contributions.
-- **Signal Tracing Mode (`Trace Signal`):** Step-by-step interactive walkthrough mode with a chronological execution log to trace data flow through the network.
-- **Live Training & Backpropagation:** Train a neural network directly in the browser on sample datasets using Gradient Descent, complete with a live loss curve chart and dynamic weight updates.
-- **Neuro — The AI Guide:** An interactive, animated companion character providing contextual guidance, feedback, and interactive Q&A drawers.
-- **Comprehensive Knowledge Quizzes & Practical Challenges:** Multi-level quizzes (Beginner, Intermediate, Advanced) and hands-on challenges backed by an XP leveling system and achievement badges saved locally (`localStorage`).
-- **Interactive Glossary:** A built-in dictionary covering key AI and deep learning terminology with everyday analogies.
+-   Visual interface for exploring neural-network concepts.
+-   Interactive learning elements, if implemented.
+-   Explanations and guided exploration, if implemented.
+-   Responsive layout, if verified on mobile and desktop.
 
----
+## Screenshots
 
-## 📸 Screenshots Gallery
+Copy the original screenshots from `Desktop/K K K` into
+`assets/screenshots/` inside this project. The examples below use
+`.png`; replace the extension with the actual file extension (`.jpg`,
+`.jpeg`, or `.webp`) when needed.
 
-Here is a visual walkthrough of the Neural Playground interface across its core educational modules:
+### H1 --- Main interface
 
-| Welcome & Introduction | Simulation Lab Dashboard |
-| :---: | :---: |
-| ![Welcome Screen](h1.png)<br>*The welcoming dashboard featuring the guide Neuro.* | ![Simulation Lab](h2.png)<br>*The core neural network workspace and interactive controls.* |
+![H1 --- Main interface](assets/screenshots/H1.png)
 
-| Node & Connection Inspector | Mathematical Step-by-Step Breakdown |
-| :---: | :---: |
-| ![Inspector Panel](h3.png)<br>*Detailed mathematical properties of selected nodes.* | ![Math Breakdown](h4.png)<br>*Step-by-step formulas and live calculations.* |
+### H2 --- Project screen 2
 
-| Signal Tracing Mode (`Trace Signal`) | Chronological Execution Timeline Log |
-| :---: | :---: |
-| ![Signal Tracing](h5.png)<br>*Tracing data flow across layers step-by-step.* | ![Timeline Log](h6.png)<br>*Chronological log of execution steps and values.* |
+![H2 --- Project screen 2](assets/screenshots/H2.png)
 
-| Training & Backpropagation Module | Live Loss Curve (`Loss Curve`) |
-| :---: | :---: |
-| ![Training Module](h7.png)<br>*Training the network on sample classification datasets.* | ![Loss Curve](h8.png)<br>*Visualizing loss reduction over training epochs.* |
+### H3 --- Project screen 3
 
-| Multi-Level Knowledge Quizzes | Interactive Glossary of AI Concepts |
-| :---: | :---: |
-| ![Quizzes](h9.png)<br>*Multi-level tests with instant feedback and XP rewards.* | ![Glossary](h10.png)<br>*Interactive dictionary explaining core AI concepts.* |
+![H3 --- Project screen 3](assets/screenshots/H3.png)
 
----
+### H4 --- Project screen 4
 
-## 🛠️ Tech Stack
+![H4 --- Project screen 4](assets/screenshots/H4.png)
 
-Neural Playground is built with a lightweight, performance-first approach using pure web technologies:
-- **HTML5:** Semantic structure and custom SVG graphics for the mascot and UI icons.
-- **CSS3:** Modern styling featuring Glassmorphism, CSS variables, and responsive grid layouts.
-- **Vanilla JavaScript (ES6+):** Pure custom implementation of forward pass math, sigmoid activation functions, backpropagation algorithms, HTML5 Canvas rendering, and state management via `localStorage`.
+### H5 --- Project screen 5
 
----
+![H5 --- Project screen 5](assets/screenshots/H5.png)
 
-## 📁 Project Structure
+### H6 --- Project screen 6
 
-```text
+![H6 --- Project screen 6](assets/screenshots/H6.png)
+
+### H7 --- Project screen 7
+
+![H7 --- Project screen 7](assets/screenshots/H7.png)
+
+### H8 --- Project screen 8
+
+![H8 --- Project screen 8](assets/screenshots/H8.png)
+
+### H9 --- Project screen 9
+
+![H9 --- Project screen 9](assets/screenshots/H9.png)
+
+### H10 --- Project screen 10
+
+![H10 --- Project screen 10](assets/screenshots/H10.png)
+
+*Replace the generic captions with accurate descriptions after reviewing
+each screenshot. GitHub will display the images once the files are
+committed at these paths.*
+
+## Technology Stack
+
+The project has been described as a web application using:
+
+-   HTML
+-   CSS
+-   Vanilla JavaScript
+
+Verify these technologies against the current source files before
+publishing. Add other libraries or tools only if they are actually used.
+
+## Project Structure
+
+The screenshot folder below is a suggested addition. Keep the actual
+application structure unchanged.
+
+``` text
 neural-playground/
-│
-├── index.html        # Main application structure, embedded CSS, and JS engine
-├── h1.png - h10.png  # Interface screenshots
-└── README.md         # Project documentation
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    └── screenshots/
+        ├── H1.png
+        ├── H2.png
+        ├── H3.png
+        ├── H4.png
+        ├── H5.png
+        ├── H6.png
+        ├── H7.png
+        ├── H8.png
+        ├── H9.png
+        └── H10.png
+```
+
+## Getting Started
+
+1.  Clone or download this repository.
+2.  Open the project folder in Visual Studio Code.
+3.  Open `index.html` using the Live Server extension, if installed.
+
+If the project uses additional setup steps, update this section to match
+the actual implementation.
+
+## Future Improvements
+
+Potential future directions, not claims about existing functionality:
+
+-   Expand guided explanations of neural-network concepts.
+-   Add more interactive experiments and learning challenges.
+-   Improve accessibility and mobile usability.
+-   Add learning progress and practical examples.
+
+## Author
+
+**Khawlah Alsharaby**
+
+------------------------------------------------------------------------
+
+*An educational project exploring ways to make neural networks easier to
+learn through visual and interactive experiences.*

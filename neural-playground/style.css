@@ -1,0 +1,1172 @@
+/* ==========================================================================
+   Neural Playground — Stylesheet (RTL, Futuristic Lab, Glassmorphism)
+   ========================================================================== */
+
+:root {
+    --bg-deep: #0b0f19;
+    --bg-secondary: #131b2e;
+    --glass-bg: rgba(23, 32, 56, 0.72);
+    --glass-border: rgba(148, 163, 184, 0.18);
+    --cyan-glow: #38bdf8;
+    --purple-glow: #818cf8;
+    --pink-glow: #f472b6;
+    --gold-glow: #fbbf24;
+    --green-glow: #34d399;
+    --red-glow: #f87171;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --transition-speed: 0.3s;
+}
+
+/* وضع تقليل الحركة للمستخدمين الذين يفضلون ذلك */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, var(--bg-deep) 70%);
+    color: var(--text-main);
+    min-height: 100vh;
+    line-height: 1.65;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* إضاءات خلفية محيطية */
+.bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(110px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.35;
+}
+.bg-glow-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--cyan-glow);
+    top: -100px;
+    right: -100px;
+}
+.bg-glow-2 {
+    width: 450px;
+    height: 450px;
+    background: var(--pink-glow);
+    bottom: -120px;
+    left: -100px;
+}
+
+/* البطاقات الزجاجية */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* الشريط العلوي */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px auto 8px;
+    max-width: 1360px;
+    padding: 14px 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    font-size: 2.2rem;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid var(--cyan-glow);
+    border-radius: 14px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.brand-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.en-badge {
+    font-size: 0.78rem;
+    font-family: 'Fira Code', monospace;
+    background: rgba(129, 140, 248, 0.2);
+    color: var(--cyan-glow);
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+.brand-slogan {
+    font-size: 0.88rem;
+    color: var(--gold-glow);
+}
+
+/* أزرار التنقل */
+.main-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border: 1px solid transparent;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-btn .step-num {
+    background: rgba(255, 255, 255, 0.12);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #fff;
+}
+
+.nav-btn.active {
+    background: linear-gradient(135deg, #0284c7, #4f46e5);
+    color: #fff;
+    border-color: var(--cyan-glow);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
+}
+
+.utility-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition: 0.2s;
+}
+
+.icon-btn:hover, .icon-btn.active-toggle {
+    border-color: var(--cyan-glow);
+    background: rgba(56, 189, 248, 0.2);
+}
+
+/* شريط التقدم */
+.journey-progress-container {
+    max-width: 1360px;
+    margin: 0 auto 18px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.journey-progress-bar {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(90deg, var(--cyan-glow), var(--pink-glow), var(--gold-glow));
+    transition: width 0.4s ease;
+}
+
+/* الحاوية الرئيسية والصفحات */
+.main-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+.page-section {
+    display: none;
+    animation: fadeInPage 0.35s ease;
+}
+
+.page-section.active {
+    display: block;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* الأزرار العامة */
+.btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.98rem;
+    padding: 10px 20px;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.35);
+}
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.55);
+}
+
+.btn-secondary {
+    background: rgba(129, 140, 248, 0.2);
+    color: #e0e7ff;
+    border: 1px solid var(--purple-glow);
+}
+.btn-secondary:hover:not(:disabled) {
+    background: rgba(129, 140, 248, 0.35);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--glass-border);
+}
+.btn-outline:hover {
+    border-color: var(--cyan-glow);
+    color: #fff;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* ==========================================
+   تنسيقات الصفحة 1: الترحيب
+=========================================== */
+.intro-hero {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+    padding: 32px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.mascot-container {
+    text-align: center;
+}
+
+.hero-neuron-svg {
+    animation: floatSlow 3.5s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.mascot-tag {
+    display: inline-block;
+    margin-top: 8px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--cyan-glow);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.speech-bubble {
+    background: rgba(15, 23, 42, 0.65);
+    border-right: 4px solid var(--cyan-glow);
+    padding: 20px 24px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.lead-text {
+    font-size: 1.18rem;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.sub-text {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+}
+
+.intro-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.more-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.info-card {
+    padding: 22px;
+    border-top: 3px solid var(--purple-glow);
+}
+
+.info-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.en-term {
+    font-size: 0.82rem;
+    color: var(--cyan-glow);
+    font-family: 'Fira Code', monospace;
+}
+
+.mini-preview-card {
+    padding: 24px;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.hint-badge {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--gold-glow);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.mini-canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    background: rgba(11, 15, 25, 0.6);
+    border-radius: 14px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.layer-labels-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.layer-tag {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.04);
+}
+.input-tag { border-bottom: 3px solid var(--cyan-glow); }
+.hidden-tag { border-bottom: 3px solid var(--purple-glow); }
+.output-tag { border-bottom: 3px solid var(--pink-glow); }
+
+/* ==========================================
+   تنسيقات الصفحة 2: مختبر المحاكاة التفاعلية
+=========================================== */
+.sim-top-banner {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.scientific-note {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.mode-switch-group {
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.mode-btn {
+    background: transparent;
+    color: var(--text-muted);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.mode-btn.active {
+    background: var(--purple-glow);
+    color: #0b0f19;
+}
+
+.lab-dialogue-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 22px;
+    margin-bottom: 18px;
+    border-right: 5px solid var(--gold-glow);
+}
+
+.dialogue-avatar {
+    font-size: 2.4rem;
+    background: rgba(251, 191, 36, 0.15);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stage-indicator {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--gold-glow);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.sim-workspace {
+    display: grid;
+    grid-template-columns: 300px 1fr 320px;
+    gap: 18px;
+    align-items: start;
+}
+
+.sim-controls, .sim-inspector {
+    padding: 20px;
+}
+
+.sim-controls h3, .sim-inspector h3 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    color: var(--cyan-glow);
+}
+
+.input-slider-box {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.val-pill {
+    background: var(--cyan-glow);
+    color: #0f172a;
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--cyan-glow);
+    cursor: pointer;
+}
+
+.slider-sublabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.chip-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid var(--glass-border);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.chip-btn:hover {
+    border-color: var(--cyan-glow);
+    background: rgba(56, 189, 248, 0.2);
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--glass-border);
+    margin: 16px 0;
+}
+
+.action-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.action-buttons-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.toggle-options {
+    margin-top: 14px;
+    font-size: 0.9rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* منطقة الكانفاس الوسطى */
+.sim-canvas-area {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas-layer-titles {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+}
+
+.canvas-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(8, 12, 22, 0.75);
+    border-radius: 14px;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    overflow-x: auto;
+}
+
+#simCanvas {
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+}
+
+.canvas-footer-hint {
+    margin-top: 10px;
+    font-size: 0.86rem;
+    color: var(--gold-glow);
+    text-align: center;
+}
+
+/* الفاحص الرياضي والنتيجة */
+.prediction-result-box {
+    background: rgba(15, 23, 42, 0.75);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(244, 114, 182, 0.3);
+}
+
+.gauge-meter {
+    height: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #f472b6, #34d399);
+    transition: width 0.5s ease;
+}
+
+.pred-percentage {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--gold-glow);
+    font-family: 'Fira Code', monospace;
+}
+
+.pred-caption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.math-card {
+    background: rgba(11, 15, 25, 0.8);
+    border: 1px solid var(--purple-glow);
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+}
+
+.math-card-title {
+    font-weight: 800;
+    color: var(--gold-glow);
+    margin-bottom: 8px;
+}
+
+.formula-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.82rem;
+    color: var(--cyan-glow);
+    margin-bottom: 10px;
+}
+
+.live-calc-details {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.concept-mini-notes {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ملخص المرحلة الخامسة */
+.sim-summary {
+    margin-top: 20px;
+    padding: 24px;
+    border: 2px solid var(--green-glow);
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.summary-item {
+    background: rgba(15, 23, 42, 0.7);
+    padding: 14px;
+    border-radius: 12px;
+    border-right: 3px solid var(--cyan-glow);
+}
+
+/* ==========================================
+   تنسيقات الصفحة 3: التدريب والانتشار العكسي
+=========================================== */
+.train-header {
+    padding: 22px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.disclaimer-pill {
+    background: rgba(251, 191, 36, 0.12);
+    border: 1px solid var(--gold-glow);
+    color: var(--gold-glow);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.training-steps-strip {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+    margin-bottom: 18px;
+    overflow-x: auto;
+    gap: 8px;
+}
+
+.t-step {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--text-muted);
+    transition: 0.25s;
+}
+
+.t-step.active-step {
+    background: var(--gold-glow);
+    color: #0b0f19;
+    box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.train-workspace {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 20px;
+}
+
+.train-col-left {
+    padding: 22px;
+}
+
+.small-note {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.dataset-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 0.9rem;
+}
+
+.dataset-table th, .dataset-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dataset-table th {
+    color: var(--cyan-glow);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hyperparams-box {
+    margin-bottom: 16px;
+}
+
+.hyperparams-box select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #fff;
+    border: 1px solid var(--glass-border);
+    font-family: inherit;
+}
+
+.train-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.train-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.train-mascot-feedback {
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.train-face {
+    font-size: 3rem;
+}
+
+.train-bubble {
+    flex: 1;
+    min-width: 220px;
+}
+
+.metrics-pills {
+    display: flex;
+    gap: 12px;
+}
+
+.metric-box {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--cyan-glow);
+}
+.metric-box span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+.metric-box strong {
+    font-size: 1.4rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--cyan-glow);
+}
+.metric-box.loss-box {
+    border-color: var(--pink-glow);
+}
+.metric-box.loss-box strong {
+    color: var(--pink-glow);
+}
+
+.loss-chart-card, .weights-diff-card {
+    padding: 20px;
+}
+
+#lossCanvas {
+    width: 100%;
+    background: rgba(11, 15, 25, 0.75);
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.weights-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.w-pill {
+    background: rgba(15, 23, 42, 0.75);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    border-right: 3px solid var(--purple-glow);
+}
+
+/* ==========================================
+   تنسيقات الصفحة 4: الاختبار
+=========================================== */
+.quiz-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 14px;
+}
+
+.score-badge {
+    background: rgba(52, 211, 153, 0.15);
+    color: var(--green-glow);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.question-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-option-btn {
+    text-align: right;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: var(--cyan-glow);
+}
+
+.quiz-option-btn.correct {
+    background: rgba(52, 211, 153, 0.25);
+    border-color: var(--green-glow);
+}
+
+.quiz-option-btn.wrong {
+    background: rgba(248, 113, 113, 0.25);
+    border-color: var(--red-glow);
+}
+
+.quiz-feedback {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    border-right: 4px solid var(--cyan-glow);
+}
+
+.feedback-status {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.quiz-feedback p {
+    margin-bottom: 14px;
+}
+
+.quiz-result {
+    text-align: center;
+    padding: 20px;
+}
+
+.result-emoji {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.final-score-text {
+    font-size: 1.4rem;
+    color: var(--gold-glow);
+    margin: 10px 0;
+}
+
+.result-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* ==========================================
+   تنسيقات الصفحة 5: القاموس التفاعلي
+=========================================== */
+.glossary-header {
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.glossary-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 20px;
+}
+
+.glossary-list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 620px;
+    overflow-y: auto;
+}
+
+.term-item-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid transparent;
+    color: var(--text-main);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: right;
+    transition: 0.2s;
+}
+
+.term-item-btn:hover {
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.term-item-btn.active {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(99, 102, 241, 0.3));
+    border-color: var(--cyan-glow);
+}
+
+.glossary-detail {
+    padding: 30px;
+}
+
+.detail-badge {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--cyan-glow);
+    font-family: 'Fira Code', monospace;
+    padding: 4px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.detail-example-box {
+    background: rgba(251, 191, 36, 0.1);
+    border-right: 4px solid var(--gold-glow);
+    padding: 16px;
+    border-radius: 10px;
+    margin: 18px 0;
+}
+
+.detail-visual-box {
+    background: rgba(11, 15, 25, 0.75);
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    color: var(--green-glow);
+    margin-top: 16px;
+}
+
+/* الفوتر */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* ==========================================
+   التجاوب مع الجوال والشاشات الصغيرة (Responsive)
+=========================================== */
+@media (max-width: 1100px) {
+    .sim-workspace {
+        grid-template-columns: 1fr;
+    }
+    .train-workspace {
+        grid-template-columns: 1fr;
+    }
+    .glossary-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .layer-labels-row {
+        grid-template-columns: 1fr;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .brand {
+        justify-content: center;
+    }
+    .main-nav {
+        justify-content: center;
+    }
+    .utility-controls {
+        justify-content: center;
+    }
+}

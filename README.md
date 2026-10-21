@@ -32,27 +32,29 @@ For many beginners, machine learning feels like a "black box" buried under compl
 
 ## 📸 Screenshots Gallery
 
-Here is a quick visual walkthrough of the Neural Playground interface and its core educational modules:
+Here is a visual walkthrough of the Neural Playground interface across its core educational modules (sourced from `assets/screenshots/`):
 
-| Interface & Welcome Screen | Interactive Simulation Lab |
+| Welcome & Introduction | Simulation Lab Dashboard |
 | :---: | :---: |
-| ![Welcome Screen](assets/screenshots/H1.png)<br>*The welcoming dashboard featuring the guide Neuro.* | ![Simulation Lab](assets/screenshots/H2.png)<br>*The core neural network workspace and controls.* |
+| ![Welcome Screen](assets/screenshots/h1.png)<br>*The welcoming dashboard featuring the guide Neuro.* | ![Simulation Lab](assets/screenshots/h2.png)<br>*The core neural network workspace and interactive controls.* |
 
-| Neuron & Connection Inspector | Mathematical Breakdown |
+| Node & Connection Inspector | Mathematical Step-by-Step Breakdown |
 | :---: | :---: |
-| ![Inspector Panel](assets/screenshots/H3.png)<br>*Detailed mathematical properties of selected nodes.* | ![Math Breakdown](assets/screenshots/H4.png)<br>*Step-by-step formulas and live calculations.* |
+| ![Inspector Panel](assets/screenshots/h3.png)<br>*Detailed mathematical properties of selected nodes.* | ![Math Breakdown](assets/screenshots/h4.png)<br>*Step-by-step formulas and live calculations.* |
 
-| Signal Tracing Mode | Execution Timeline Log |
+| Signal Tracing Mode (`Trace Signal`) | Chronological Execution Timeline Log |
 | :---: | :---: |
-| ![Signal Tracing](assets/screenshots/H5.png)<br>*Tracing data flow across layers step-by-step.* | ![Timeline Log](assets/screenshots/H6.png)<br>*Chronological log of execution steps.* |
+| ![Signal Tracing](assets/screenshots/h5.png)<br>*Tracing data flow across layers step-by-step.* | ![Timeline Log](assets/screenshots/h6.png)<br>*Chronological log of execution steps and values.* |
 
-| Training & Backpropagation | Live Loss Curve |
+| Training & Backpropagation Module | Live Loss Curve (`Loss Curve`) |
 | :---: | :---: |
-| ![Training Module](assets/screenshots/H7.png)<br>*Training the network on sample datasets.* | ![Loss Curve](assets/screenshots/H8.png)<br>*Visualizing loss reduction over epochs.* |
+| ![Training Module](assets/screenshots/h7.png)<br>*Training the network on sample classification datasets.* | ![Loss Curve](assets/screenshots/h8.png)<br>*Visualizing loss reduction over training epochs.* |
 
-| Knowledge Quizzes & Levels | Interactive Glossary |
+| Multi-Level Knowledge Quizzes | Interactive Glossary of AI Concepts |
 | :---: | :---: |
-| ![Quizzes](assets/screenshots/H9.png)<br>*Multi-level tests with instant feedback.* | ![Glossary](assets/screenshots/H10.png)<br>*Interactive dictionary of AI concepts.* |
+| ![Quizzes](assets/screenshots/h9.png)<br>*Multi-level tests with instant feedback and XP rewards.* | ![Glossary](assets/screenshots/h10.png)<br>*Interactive dictionary explaining core AI concepts.* |
+
+*(Note: Ensure that the image extensions—whether `.png`, `.jpg`, `.jpeg`, or `.webp`—inside `assets/screenshots/` match the exact filenames `h1` through `h10` as structured above).*
 
 ---
 
@@ -72,5 +74,5 @@ neural-playground/
 │
 ├── index.html        # Main application structure, embedded CSS, and JS engine
 ├── assets/
-│   └── screenshots/  # Interface screenshots (H1 to H10)
+│   └── screenshots/  # Interface screenshots (h1 to h10 matching original files)
 └── README.md         # Project documentation

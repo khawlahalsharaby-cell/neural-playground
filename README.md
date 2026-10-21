@@ -2,10 +2,29 @@
 
 > **Explore Neural Networks. Understand How AI Learns.**
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+## 📸 Screenshots Gallery
+
+Here is a visual walkthrough of the Neural Playground interface across its core educational modules (sourced from `KKK/`):
+
+| Welcome & Introduction | Simulation Lab Dashboard |
+| :---: | :---: |
+| ![Welcome Screen](KKK/h1.png)<br>*The welcoming dashboard featuring the guide Neuro.* | ![Simulation Lab](KKK/h2.png)<br>*The core neural network workspace and interactive controls.* |
+
+| Node & Connection Inspector | Mathematical Step-by-Step Breakdown |
+| :---: | :---: |
+| ![Inspector Panel](KKK/h3.png)<br>*Detailed mathematical properties of selected nodes.* | ![Math Breakdown](KKK/h4.png)<br>*Step-by-step formulas and live calculations.* |
+
+| Signal Tracing Mode (`Trace Signal`) | Chronological Execution Timeline Log |
+| :---: | :---: |
+| ![Signal Tracing](KKK/h5.png)<br>*Tracing data flow across layers step-by-step.* | ![Timeline Log](KKK/h6.png)<br>*Chronological log of execution steps and values.* |
+
+| Training & Backpropagation Module | Live Loss Curve (`Loss Curve`) |
+| :---: | :---: |
+| ![Training Module](KKK/h7.png)<br>*Training the network on sample classification datasets.* | ![Loss Curve](KKK/h8.png)<br>*Visualizing loss reduction over training epochs.* |
+
+| Multi-Level Knowledge Quizzes | Interactive Glossary of AI Concepts |
+| :---: | :---: |
+| ![Quizzes](KKK/h9.png)<br>*Multi-level tests with instant feedback and XP rewards.* | ![Glossary](KKK/h10.png)<br>*Interactive dictionary explaining core AI concepts.* |
 
 ---
 
